@@ -6,6 +6,9 @@
 \usepackage[colorlinks = true,linkcolor = red, urlcolor  = blue, citecolor = blue, anchorcolor = blue]{hyperref}
 \usepackage[pagestyles]{titlesec}
 
+\titleformat{\chapter}[display]
+    {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-30pt}{20pt}
 
 \titleformat{\chapter}%
   {\normalfont\bfseries\LARGE}{\thechapter.}{10pt}{}
@@ -32,7 +35,7 @@
 
 \newpage
 
-\chapter {Introduction}
+\chapter {Abstract}
 \hfill \break DoS and DDoS attacks are attempts to exhaust server side assets, and designed to prevent client-to-server communication (denial of service). These attacks aim to both public and private sectors, and occur more and more frequently. In addition, lately the massive DDoS attacks are performing 100 Gigabits per second, and being more common than ever. These attacks are sowing fear among organizations and private server owners.
 
 \hfill \break Our project deals with understanding and examining DoS and DDoS attacks, and what are the solutions for them. In particularly, we will discuss and handle with traffic flood attacks on web servers, and will try to develop our own software or algorithm to block or to give any immediately pragmatic solution.
@@ -158,28 +161,47 @@ The Incapsula DDoS protection provide blanket protection against ICMP floods by 
  \hfill \break To combat APDoS, organizations require a single vendor, hybrid cyber security solution that protects networks and applications from a wide range of attacks. Ideally, such a solution includes all the different technologies needed for effective detection and mitigation, including DoS/DDoS protection, behavioral analysis, IPS, encrypted attack protection and web application firewall (WAF). Additionally, organizations also require new levels of partnership with their DDoS mitigation service provider and any ISP that provides managed DDoS services to coordinate for the effective detection and mitigation of a multi-vector assault.
 
 \newpage
-
-
 \chapter {Related Work}
-
-\section {Traffic flooding attack detection with SNMP MIB using SVM}
+\section {Related Articles}
+\subsection {Traffic flooding attack detection with SNMP MIB using SVM}
  {\footnotesize  Jaehak Yu, Hansung Lee, Myung-Sup Kim *, Daihee Park}
 
 Deep review of DoS and DDoS attacks, and rapid detection and proper response mechanisms, using MIB (Management Information base) over SNMP protocol.
 [\href{http://www.sciencedirect.com/science/article/pii/S0140366408005094}{Link}]
   \hfill \break
 
-\section {Change trend of averaged Hurst parameter of traffic under DDOS flood attacks}
+\subsection {Change trend of averaged Hurst parameter of traffic under DDOS flood attacks}
  {\footnotesize Ming Li, School of Information Science and Technology, East China Normal University.}
 
 Overview for the increasingly data traffic for a DoS and DDoS attack.
 [\href{http://www.sciencedirect.com/science/article/pii/S0167404805001963}{Link}]
 \hfill \break
 
-\section{Software-Defined Networking (SDN) and Distributed Denial of Service (DDoS) Attacks in Cloud Computing Environments }
+\subsection{Software-Defined Networking (SDN) and Distributed Denial of Service (DDoS) Attacks in Cloud Computing Environments }
 {\footnotesize Qiao Yan, F. Richard Yu, Senior Member, IEEE, Qingxiang Gong, and Jianqiang Li }
 
 Advantages and disadvantages of using SDN as a traffic analyzer, centralized control and global view of the network. The article also represents studies of launching DDoS attack in SDN, as well as the methods against DDoS attack in SDN.
 [\href{http://ieeexplore.ieee.org/abstract/document/7289347}{Link}]
+\newpage
+\section {Related Productions}
+ \hfill \break
+\subsection {Cisco - 'DDoS Mitigation'}
+Cisco had developed a System which delivers a complete DDoS protection solution based on the principles of detection, diversion, verification, and forwarding to help ensure total protection. The solution maintains the business continuity by: 
+\begin{itemize}
+\item Detecting the DDoS attack.
+\item Diverting  the data traffic destined for the target device to  a Cisco appliance for treatment.
+\item Analyzing and filtering  the bad traffic flows from the good traffic flows packets, preventing malicious traffic from impacting performance while allowing legitimate transactions to complete.
+\item Forwarding  the good traffic to maintain business continuity.
+\end{itemize}
+[\href{https://www.cisco.com/c/en/us/products/collateral/security/traffic-anomaly-detector-xt-5600a/prod_white_paper0900aecd8011e927.pdf}{Link}]
+  \hfill \break
+
+\subsection {Check Point -  'DDoS Protector'}
+Check Point had developed a System called 'DDoS Protector', which keeps businesses running with multi-layered, customizable protections and up to 40Gbps performance that automatically defends against network flood and application layer attacks with fast response time against today’s sophisticated denial of service attacks.
+\hfill \break
+DDoS Protector Appliances offer flexible deployment options to easily protect any size business, and integrated security management for real-time traffic analysis and threat management intelligence for advanced protection against DDoS attacks.
+  \hfill \break
+[\href{https://www.checkpoint.com/downloads/product-related/datasheets/ds-ddos-protector-appliances.pdf}{Link}]
+  \hfill \break
 
 \end{document}
