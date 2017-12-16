@@ -6,6 +6,11 @@
 \usepackage[colorlinks = true,linkcolor = red, urlcolor  = blue, citecolor = blue, anchorcolor = blue]{hyperref}
 \usepackage[pagestyles]{titlesec}
 
+
+\usepackage[backend=bibtex,style=numeric,sorting=none]{biblatex}
+
+\addbibresource{bibresource.bib}  
+
 \titleformat{\chapter}[display]
     {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
 \titlespacing*{\chapter}{0pt}{-30pt}{20pt}
@@ -164,44 +169,58 @@ The Incapsula DDoS protection provide blanket protection against ICMP floods by 
 \chapter {Related Work}
 \section {Related Articles}
 \subsection {Traffic flooding attack detection with SNMP MIB using SVM}
- {\footnotesize  Jaehak Yu, Hansung Lee, Myung-Sup Kim *, Daihee Park}
-
-Deep review of DoS and DDoS attacks, and rapid detection and proper response mechanisms, using MIB (Management Information base) over SNMP protocol.
-[\href{http://www.sciencedirect.com/science/article/pii/S0140366408005094}{Link}]
+DoS and DDoS attacks have become more and more destructive, and are threatening to various network services. Hence, the various methods of protection and monitoring and control of network traffic have also begun.
+However, most of the current modern detection systems are focusing on detail analysing for each packet’s data, which causes late detection and can’t handle high network traffic.
+  \hfill \break
+SNMP (Simple Network Management Protocol)\cite{snmp}  provides a universal method of exchanging data for purposes of monitoring systems that reside on a network. The use of SNMP is most dominant in the modern industry. But, to utilize SNMP for traffic flooding attack detection, we need to consider the following three points in the use of the SNMP MIB variables which affects the performance and accuracy of the detection system:
+\begin{itemize}
+\item Proper selection of SNMP MIB variables for attack detection
+\item Determination of the detection timing about when and how often
+\item Algorithm for attack detection using the selected MIB (Management Information Base) variables.
+\end{itemize}
   \hfill \break
 
 \subsection {Change trend of averaged Hurst parameter of traffic under DDOS flood attacks}
- {\footnotesize Ming Li, School of Information Science and Technology, East China Normal University.}
-
-Overview for the increasingly data traffic for a DoS and DDoS attack.
-[\href{http://www.sciencedirect.com/science/article/pii/S0167404805001963}{Link}]
+DoS and DDOS flood attacks are great threats to the internet though various approaches and systems have been proposed. Hence, Intrusion Detecting System (IDS) and Intrusion Preventing System (IPS) are desired. The DDoS flood attack sends packets upon a server with a huge amount of traffic. It never tries to break into the server’s system, which makes the servers’s security defenses irrelevant.
+\hfill \break
+The solutions given by misuse detection are primarily based on a library of known signatures to match against network traffic . Hence, unknown signatures from new variants of an attack mean are hard to be recognized. Therefore, anomaly detectors (exceeded routine detectors) play a role in detection of DDOS flood attacks.
+\hfill \break
+It is important considering the Hurst parameter - H in characterizing exceptions of traffic series in packet size under DDOS flood attacks. This paper specifically  \cite{Hurst} studies how H of traffic is changing under DDOS flood attacks. It it important understanding the following:
+\begin{enumerate}
+\item Whether H of traffic when a server is under DDoS flood attacks is much different from the regular one?
+\item How is H changes when a server suffers from DDoS flood attacks?
+\end{enumerate}
+Answering these questions might give us better understanding for detecting and protecting from DDoS flood attacks.
 \hfill \break
 
 \subsection{Software-Defined Networking (SDN) and Distributed Denial of Service (DDoS) Attacks in Cloud Computing Environments }
-{\footnotesize Qiao Yan, F. Richard Yu, Senior Member, IEEE, Qingxiang Gong, and Jianqiang Li }
-
-Advantages and disadvantages of using SDN as a traffic analyzer, centralized control and global view of the network. The article also represents studies of launching DDoS attack in SDN, as well as the methods against DDoS attack in SDN.
-[\href{http://ieeexplore.ieee.org/abstract/document/7289347}{Link}]
+Cloud computing develops rapidly due to its essential characteristics. Cloud computing would not be possible without the underneath support of networking. Recently, Software Defined Networking (SDN)  \cite{SDN} has attracted great interests as a new paradigm in networking. In SDN, network intelligence and state are logically centralized, and the underlying network infrastructure is abstracted from the applications. Denial of Service (DoS) attacks and Distributed De-
+nial of Service(DDoS) flooding attacks are the main methods to destroy availability of cloud computing.
+Although the capabilities of SDN make it easy to detect and to react DDoS attacks in cloud environments, the separation of the control plane from the data plane in SDN introduces new attack planes. SDN itself may be a target of some attacks, and potential DDoS vulnerabilities exist across SDN platforms. For example, an attacker can take advantages of the characteristics of SDN to launch DDoS attacks against the control layer, infrastructure layer plane and application layer of SDN.
 \newpage
 \section {Related Productions}
  \hfill \break
-\subsection {Cisco - 'DDoS Mitigation'}
-Cisco had developed a System which delivers a complete DDoS protection solution based on the principles of detection, diversion, verification, and forwarding to help ensure total protection. The solution maintains the business continuity by: 
+\subsection {Cisco - 'DDoS Mitigation' } 
+Cisco had developed a System which delivers a complete DDoS protection solution based on the principles of detection, diversion, verification, and forwarding to help ensure total protection\cite{cisco}. The solution maintains the business continuity by: 
 \begin{itemize}
 \item Detecting the DDoS attack.
 \item Diverting  the data traffic destined for the target device to  a Cisco appliance for treatment.
 \item Analyzing and filtering  the bad traffic flows from the good traffic flows packets, preventing malicious traffic from impacting performance while allowing legitimate transactions to complete.
 \item Forwarding  the good traffic to maintain business continuity.
 \end{itemize}
-[\href{https://www.cisco.com/c/en/us/products/collateral/security/traffic-anomaly-detector-xt-5600a/prod_white_paper0900aecd8011e927.pdf}{Link}]
+
   \hfill \break
 
-\subsection {Check Point -  'DDoS Protector'}
-Check Point had developed a System called 'DDoS Protector', which keeps businesses running with multi-layered, customizable protections and up to 40Gbps performance that automatically defends against network flood and application layer attacks with fast response time against today’s sophisticated denial of service attacks.
+\subsection {Check Point -  'DDoS Protector' }
+Check Point had developed a System called 'DDoS Protector'\cite{checkpoint}, which keeps businesses running with multi-layered, customizable protections and up to 40Gbps performance that automatically defends against network flood and application layer attacks with fast response time against today’s sophisticated denial of service attacks.
 \hfill \break
 DDoS Protector Appliances offer flexible deployment options to easily protect any size business, and integrated security management for real-time traffic analysis and threat management intelligence for advanced protection against DDoS attacks.
-  \hfill \break
-[\href{https://www.checkpoint.com/downloads/product-related/datasheets/ds-ddos-protector-appliances.pdf}{Link}]
+The product provides multi-layer protections, handles network and traffic flood and has a management system.
   \hfill \break
 
+
+
+\newpage
+\addcontentsline{toc}{chapter}{References}
+\printbibliography[title=References]
 \end{document}
