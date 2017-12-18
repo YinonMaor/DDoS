@@ -28,6 +28,7 @@
 \titleformat{\subsection}%
   {\normalfont\bfseries\small}{\thesubsection.}{10pt}{}
 
+\renewcommand*{\glstextformat}[1]{\textcolor{black}{#1}}
 % Acronym definitions
 
 \newacronym{DoS}{DoS}{Denial-of-service attack}
@@ -238,7 +239,9 @@ The product provides multi-layer protections, handles network and traffic flood 
   \hfill \break
 
 %Print the glossary
-\printglossary[type=\acronymtype,title=Abbreviations]
+\newpage
+\addcontentsline{toc}{chapter}{Acronyms}
+\printglossary[type=\acronymtype,title=Acronyms]
 \newpage
 \addcontentsline{toc}{chapter}{References}
 \printbibliography[title=References]
